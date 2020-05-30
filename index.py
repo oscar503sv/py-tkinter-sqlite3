@@ -12,23 +12,21 @@ class Product:
         self.wind.title('Aplicación de productos')
 
         #Contenedor frame
-
         frame = LabelFrame(self.wind, text='Registra un nuevo producto')
         frame.grid(row = 0, column = 0, columnspan = 3, pady = 20)
 
-        #entra de nombre
+        #entrada de nombre
         Label(frame, text = 'Nombre: ').grid(row = 1, column = 0)
         self.name = Entry(frame)
         self.name.focus()
         self.name.grid(row = 1, column = 1)
 
-        #entrar el precio
+        #entrada de precio
         Label(frame, text = 'Precio: ').grid(row = 2, column = 0)
         self.price = Entry(frame)
         self.price.grid(row = 2, column = 1)
 
         #boton agregar
-
         ttk.Button(frame, text = 'Guardar producto', command = self.add_product).grid(row = 3, columnspan = 2, sticky = W + E)
         
         #Mensajes
